@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fundación Un Día a la Vez · Alcohólicos Anónimos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#0a0a0a;--mut:#666;--line:#e5e5e5;--card:#fafafa;--acc:#0a0a0a;--accfg:#fff;--bar:#0a0a0a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--fg:#ededed;--mut:#a1a1a1;--line:#2a2a2a;--card:#0d0d0d;--acc:#ededed;--accfg:#000;--bar:#ededed}}
+:root[data-theme="dark"]{--bg:#000;--fg:#ededed;--mut:#a1a1a1;--line:#2a2a2a;--card:#0d0d0d;--acc:#ededed;--accfg:#000;--bar:#ededed}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;border:0}
+.logo{font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.tri{width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:16px solid var(--fg)}
+nav{display:flex;gap:22px;font-size:14px;color:var(--mut)}
+nav a{text-decoration:none}nav a:hover{color:var(--fg)}
+.btn{display:inline-block;font:500 14px Inter,sans-serif;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);text-decoration:none;cursor:pointer}
+.btn.p{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #0070f3;outline-offset:2px}
+.hero{padding:96px 0 72px;text-align:center;border-bottom:1px solid var(--line)}
+.pill{display:inline-block;font-size:13px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:4px 14px;margin-bottom:28px}
+h1{font-size:clamp(38px,7vw,72px);line-height:1.04;letter-spacing:-.045em;margin:0 auto 22px;max-width:14ch;font-weight:700}
+.hero p{color:var(--mut);font-size:19px;max-width:52ch;margin:0 auto 34px}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.stats div{padding:32px 24px;border-right:1px solid var(--line)}.stats div:last-child{border:0}
+.stats b{display:block;font-size:34px;letter-spacing:-.04em}.stats span{color:var(--mut);font-size:14px}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.035em;line-height:1.1;margin:0 0 12px}
+.lead{color:var(--mut);max-width:60ch;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.grid>div{padding:28px;border-right:1px solid var(--line);background:var(--card)}.grid>div:last-child{border:0}
+.grid h3{margin:0 0 8px;font-size:17px;letter-spacing:-.01em}.grid p{margin:0;color:var(--mut);font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.scroll{overflow-x:auto}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mut);font-weight:500;font-size:13px;background:var(--card)}tr:last-child td{border:0}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.box{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--card)}
+label{display:block;font-size:14px;font-weight:500;margin:0 0 6px}
+input,textarea,select{width:100%;font:inherit;font-size:15px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);margin-bottom:16px}
+textarea{min-height:120px;resize:vertical}
+.story{border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:12px;background:var(--bg)}
+.story p{margin:0 0 10px;white-space:pre-wrap}.story small{color:var(--mut)}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--mut);margin-left:8px}
+.opt{display:block;width:100%;text-align:left;position:relative;padding:12px 14px;margin-bottom:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:500 15px Inter,sans-serif;cursor:pointer;overflow:hidden}
+.opt .fill{position:absolute;inset:0 auto 0 0;background:var(--bar);opacity:.12;width:0;transition:width .5s}
+.opt span{position:relative;display:flex;justify-content:space-between}
+.note{font-size:13px;color:var(--mut)}
+details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:500}details p{color:var(--mut);margin:10px 0 0}
+.help{background:var(--card)}
+footer{padding:40px 0;color:var(--mut);font-size:14px}
+footer .wrap{border:0}
+@media (max-width:760px){nav{display:none}.grid,.two,.stats{grid-template-columns:1fr}.grid>div,.stats div{border-right:0;border-bottom:1px solid var(--line)}.hero{padding:64px 0 48px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top"><span class="tri"></span>Un Día a la Vez</a>
+<nav><a href="#programa">Programa</a><a href="#reuniones">Reuniones</a><a href="#historias">Historias</a><a href="#faq">Preguntas</a></nav>
+<a class="btn p" href="#ayuda">Pedir ayuda</a>
+</div></header>
+
+<main id="top"><div class="wrap">
+<div class="hero">
+<span class="pill">Reuniones gratuitas y confidenciales en todo el país</span>
+<h1>Dejar de beber se logra acompañado.</h1>
+<p>Fundación Un Día a la Vez reúne a personas que quieren recuperarse del alcohol. No hay cuotas, no hay juicios. Solo un lugar donde alguien te escucha porque ya estuvo ahí.</p>
+<div class="row"><a class="btn p" href="#reuniones">Encontrar una reunión</a><a class="btn" href="#historias">Leer historias</a></div>
+</div>
+
+<div class="stats">
+<div><b>24 h</b><span>Reuniones abiertas todos los días</span></div>
+<div><b>$0</b><span>Sin cuotas ni inscripción</span></div>
+<div><b>100 %</b><span>Anónimo: solo nombre de pila</span></div>
+</div>
+
+<section id="programa">
+<h2>Un programa simple, hecho de personas.</h2>
+<p class="lead">El único requisito para participar es el deseo de dejar de beber.</p>
+<div class="grid">
+<div><h3>Reuniones de grupo</h3><p>Presenciales y online. Cada persona habla si quiere, o solo escucha.</p></div>
+<div><h3>Padrinos y madrinas</h3><p>Alguien con más tiempo de sobriedad te acompaña cuando más lo necesitás.</p></div>
+<div><h3>Familias</h3><p>Grupos aparte para parejas, hijos y amigos de quien bebe o bebía.</p></div>
+</div>
+</section>
+
+<section id="reuniones">
+<h2>Próximas reuniones</h2>
+<p class="lead">Ejemplos de horarios. Reemplazalos por los de tu fundación.</p>
+<div class="scroll"><table>
+<thead><tr><th>Día</th><th>Hora</th><th>Grupo</th><th>Modalidad</th></tr></thead>
+<tbody>
+<tr><td>Lunes</td><td>19:30</td><td>Primer paso</td><td>Presencial</td></tr>
+<tr><td>Miércoles</td><td>21:00</td><td>Amanecer</td><td>Online</td></tr>
+<tr><td>Viernes</td><td>20:00</td><td>Nueva vida</td><td>Presencial</td></tr>
+<tr><td>Domingo</td><td>11:00</td><td>Familias</td><td>Presencial</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="historias">
+<h2>Comunidad: contá tu historia</h2>
+<p class="lead">Compartir lo que pasó le quita poder al secreto. Escribí de forma anónima y marcá qué bebida te hizo más daño. No hace falta que sea una historia ordenada.</p>
+<div class="two">
+<div>
+<div class="box">
+<label for="alias">Tu nombre de pila o un apodo</label>
+<input id="alias" maxlength="30" placeholder="Ej.: Marcos">
+<label for="drink">¿Qué bebida te pegó más?</label>
+<select id="drink"></select>
+<label for="text">Tu anécdota</label>
+<textarea id="text" maxlength="800" placeholder="¿Qué recordás de esa época? ¿Qué te hizo pedir ayuda?"></textarea>
+<button class="btn p" id="send" type="button">Publicar historia</button>
+<p class="note" id="msg" role="status"></p>
+</div>
+<div id="feed" style="margin-top:24px"></div>
+</div>
+<aside class="box" aria-labelledby="pt">
+<h3 id="pt" style="margin:0 0 4px;letter-spacing:-.01em">¿Qué bebida te pegó más?</h3>
+<p class="note" style="margin:0 0 16px">Votá con el botón. Es una forma de ver qué tan parecidas son nuestras historias, no un ranking para presumir.</p>
+<div id="poll"></div>
+<p class="note" id="total"></p>
+<p class="note">Los votos de ejemplo están marcados. Tus votos y publicaciones se guardan solo en este dispositivo.</p>
+</aside>
+</div>
+</section>
+
+<section id="faq">
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Tengo que ser alcohólico para ir?</summary><p>No. Solo necesitás querer dejar de beber. Nadie te va a pedir que te definas.</p></details>
+<details><summary>¿Es religioso?</summary><p>No pertenece a ninguna religión ni institución. Cada persona vive el programa a su manera.</p></details>
+<details><summary>¿Van a saber quién soy?</summary><p>Lo que se dice en la reunión se queda en la reunión. Podés usar solo tu nombre de pila.</p></details>
+</section>
+
+<section id="ayuda" class="help">
+<h2>¿Necesitás ayuda ahora?</h2>
+<p class="lead">Si estás en riesgo o con síntomas de abstinencia (temblores, confusión, convulsiones), buscá atención médica de inmediato. En Argentina podés llamar gratis a la línea 141 de SEDRONAR, o al 107 si es una emergencia médica.</p>
+<a class="btn p" href="tel:141">Llamar al 141</a>
+</section>
+</div></main>
+
+<footer><div class="wrap">© 2026 Fundación Un Día a la Vez. Sitio de ejemplo. No reemplaza atención médica ni psicológica.</div></footer>
+
+<script>
+const DRINKS=["Cerveza","Vino","Fernet","Whisky","Vodka","Ron","Tragos preparados","Otra"];
+const SEED_V={"Cerveza":14,"Vino":9,"Fernet":11,"Whisky":6,"Vodka":5,"Ron":2,"Tragos preparados":3,"Otra":1};
+const SEED_S=[
+{n:"Marcos",d:"Fernet",t:"Empecé los fines de semana y terminé escondiendo botellas en el auto. Lo que más me duele es haberme perdido el cumpleaños de mi hija. Hoy llevo 14 meses sin tomar.",ex:1},
+{n:"Lucía",d:"Vino",t:"Para mí era solo una copa con la cena, hasta que fueron tres botellas por semana. Pedí ayuda el día que mi hermano me encontró dormida en el piso.",ex:1}];
+const $=id=>document.getElementById(id);
+const store={get(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let votes=store.get("aa_votes",{}),mine=store.get("aa_mine",null),stories=store.get("aa_stories",[]);
+$("drink").innerHTML=DRINKS.map(d=>`<option>${d}</option>`).join("");
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function renderPoll(){
+ const c=DRINKS.map(d=>(SEED_V[d]||0)+(votes[d]||0));const tot=c.reduce((a,b)=>a+b,0);
+ $("poll").innerHTML=DRINKS.map((d,i)=>{const p=tot?Math.round(c[i]/tot*100):0;
+  return `<button class="opt" type="button" data-d="${d}" aria-pressed="${mine===d}"><i class="fill" style="width:${p}%"></i><span><span>${d}${mine===d?" ✓":""}</span><span>${p}%</span></span></button>`}).join("");
+ $("total").textContent=tot+" votos en total (incluye votos de ejemplo)";
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+  if(mine)votes[mine]=Math.max(0,(votes[mine]||0)-1);
+  if(mine===b.dataset.d){mine=null}else{mine=b.dataset.d;votes[mine]=(votes[mine]||0)+1}
+  store.set("aa_votes",votes);store.set("aa_mine",mine);renderPoll()});
+}
+function renderFeed(){
+ const all=[...stories,...SEED_S];
+ $("feed").innerHTML=all.map(s=>`<article class="story"><p>${esc(s.t)}</p><small>${esc(s.n||"Anónimo")}<span class="tag">${esc(s.d)}</span>${s.ex?'<span class="tag">ejemplo</span>':""}</small></article>`).join("");
+}
+$("send").onclick=()=>{
+ const t=$("text").value.trim();
+ if(t.length<20){$("msg").textContent="Escribí al menos unas líneas para publicar tu historia.";return}
+ stories.unshift({n:$("alias").value.trim(),d:$("drink").value,t});
+ store.set("aa_stories",stories);
+ $("text").value="";$("msg").textContent="Historia publicada. Gracias por compartirla.";renderFeed();
+};
+renderPoll();renderFeed();
+</script>
+</body>
+</html>
